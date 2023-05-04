@@ -16,12 +16,7 @@
 
 <template>
   <div id="page">
-    <header>
-      <div class="centered_block">
-        <img src="./assets/img/dc-logo.png" alt="logo piccolo">
-        <NavMenu/>
-      </div>
-    </header>
+    <NavMenu/>
     <main>
       <Jumbotron/>
       <CentralMenu/>
@@ -41,18 +36,4 @@
     padding: 3vh 0;
   }
 
-  header
-  {
-    div
-    {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      img
-      {
-        height: 90%;
-      }
-    }
-  }
 </style>

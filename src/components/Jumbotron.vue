@@ -5,14 +5,14 @@
 </script>
 
 <template>
-    <div>
-        <h3>-- Content goes here --</h3>
+    <div id="jumbo">
     </div>
 </template>
 
-<style scoped>
-    div{
-        min-height: 30vh;
+<style scoped lang="scss">
+@use "../style/main.scss" as *;
+    div#jumbo{
+        min-height: $jumbotron_height;
         background-image: url("../assets/img/jumbotron.jpg");
     }
 </style>

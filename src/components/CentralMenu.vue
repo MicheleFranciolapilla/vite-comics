@@ -60,33 +60,35 @@
 <style scoped lang="scss">
     @use "../style/main.scss" as *;
 
-    ul
-    {
-        @include itemsListStyle(2, 0.8rem, 30px, white);
-        padding: 0 15px;
-        li
-        {
-            height: 100%;
-            div
-            {
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                img
-                {
-                    height: calc($header_height / 1.75);
-                    object-fit: contain;
+    #central_menu_block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $central_menu_height;
+        background-color: $central_color;
+        position: relative;
+        z-index: 999;
+        ul{
+            @include itemsListStyle(2, 0.8rem, 25px, white);
+            li{
+                height: 100%;
+                div{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        height: calc($central_menu_height / 2);
+                        object-fit: contain;
+                    } 
                 } 
+                &:hover{
+                    a{
+                        color: yellowgreen;
+                    } 
+                }
             } 
-            &:hover
-            {
-                a
-                {
-                    color: yellow;
-                } 
-            }
-        } 
+        }
     }
 </style>
 

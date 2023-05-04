@@ -30,9 +30,9 @@
             <div id="sign_up_and_social" class="centered_block">
                 <h4>SIGN-UP NOW!</h4>
                 <div id="social_flex">
-                    <divv-for="(item, index) in social_icons" :key="index">
+                    <div v-for="(item, index) in social_icons" :key="index">
                         <img :src="getImagePath(`../assets/img/${item}`)">
-                </div>
+                    </div>
                 </div>
             </div>
         </div>

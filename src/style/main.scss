@@ -1,51 +1,24 @@
-@import "./partials/mixin.scss";
-@import "./partials/variables.scss";
+@import "./partials/_variables.scss";
+@import "./partials/_mixin.scss";
 
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing  : border-box;
+    margin      : 0;
+    padding     : 0;
 }
 
-ul
-{
-    list-style: none;
+ul{
+    list-style  : none;
 }
 
-a
-{
-    text-decoration: none;
-}
-
-header
-{
-    height: $header_height;
-    background-color: white;
-    li.active
-    {
-        border-color: blue;
-        a
-        {
-            color: blue;
-        }
-    }
-}
-
-#central_menu_block
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(1.5 * $header_height);
-    background-color: blue;
-    position: relative;
-    z-index: 999;
+a{
+    text-decoration : none;
 }
 
 .centered_block
 {
     width: $block_width;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #footer_bottom
