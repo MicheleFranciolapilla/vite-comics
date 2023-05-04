@@ -1,7 +1,8 @@
 @import "./partials/mixin.scss";
 @import "./partials/variables.scss";
 
-*{
+*
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,12 +19,22 @@ a
 }
 
 header,
-footer{
+footer
+{
     height: $header_height;
 }
 
-header{
+header
+{
     background-color: white;
+    li.active
+    {
+        border-color: blue;
+        a
+        {
+            color: blue;
+        }
+    }
 }
 
 .centered_block

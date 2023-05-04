@@ -44,7 +44,7 @@
       align-items: center;
       height: 100%;
       img{
-        height: 80%;
+        height: 90%;
       }
     }
   }

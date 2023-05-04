@@ -13,6 +13,7 @@
 <style scoped>
     div{
         min-height: 30vh;
-        background-image: url("../assets/img/jumbotron.jpg");
+        /* background-image: url("../assets/img/jumbotron.jpg"); */
+        background-color: black;
     }
 </style>
