@@ -79,6 +79,13 @@
                     object-fit: contain;
                 } 
             } 
+            &:hover
+            {
+                a
+                {
+                    color: yellow;
+                } 
+            }
         } 
     }
 </style>

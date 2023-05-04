@@ -2,12 +2,14 @@
   import NavMenu from "./components/NavMenu.vue"
   import Jumbotron from "./components/Jumbotron.vue"
   import CentralMenu from "./components/CentralMenu.vue"
+  import FooterComponent from "./components/FooterComponent.vue"
   export default{
     name: "App",
     components: {
       NavMenu,
       Jumbotron,
-      CentralMenu
+      CentralMenu,
+      FooterComponent
     }
   }
 </script>
@@ -25,9 +27,7 @@
       <CentralMenu/>
     </main>
     <footer>
-      <div>
-
-      </div>
+      <FooterComponent/>
     </footer>
   </div>
 </template>
@@ -37,8 +37,8 @@
 
   #page
   {
-    background-color: green;
-    padding-top: 3vh;
+    background-color: rgb(23, 23, 23);
+    padding: 3vh 0;
   }
 
   header

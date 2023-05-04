@@ -17,14 +17,9 @@ a
     text-decoration: none;
 }
 
-header,
-footer
-{
-    height: $header_height;
-}
-
 header
 {
+    height: $header_height;
     background-color: white;
     li.active
     {
@@ -43,10 +38,22 @@ header
     align-items: center;
     height: calc(1.5 * $header_height);
     background-color: blue;
+    position: relative;
+    z-index: 999;
 }
 
 .centered_block
 {
     width: $block_width;
     margin: auto;
+}
+
+#footer_bottom
+{
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: $header_height;
+    background-color: #303030;
 }
