@@ -1,0 +1,12 @@
+@mixin itemsListStyle($list, $font, $gap, $color)
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @if $list == 1 {
+
+    }
+    font-size: $font;
+    gap: $gap;
+    color: $color;
+}
