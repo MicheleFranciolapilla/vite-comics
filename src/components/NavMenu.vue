@@ -32,23 +32,31 @@
     <nav>
         <ul>
             <li v-for="(item, index) in main_menu" :key="index" v-bind:class="(index == active_item) ? ('active') : ('')">
-                <a href="#" v-on:click="set_active(index)">{{item.text}}</a>
+                <div>
+                    <a href="#" v-on:click="set_active(index)">{{item.text}}</a>
+                </div>
             </li>
         </ul>
     </nav>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
     @use "../style/main.scss" as *;
     nav
     {
         ul
         {
-            @include itemsListStyle(1, 0.75rem, 25px, black);
+            @include itemsListStyle(1, 0.6rem, 25px, black);
             li
             {
-                line-height: calc($header_height - ($menu_border_thickness * 2));
                 border-bottom: $menu_border_thickness solid white;
+                div
+                {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    line-height: $header_height;
+                } 
             } 
         }
     }

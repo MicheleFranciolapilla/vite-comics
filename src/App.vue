@@ -1,11 +1,13 @@
 <script>
   import NavMenu from "./components/NavMenu.vue"
   import Jumbotron from "./components/Jumbotron.vue"
+  import CentralMenu from "./components/CentralMenu.vue"
   export default{
     name: "App",
     components: {
       NavMenu,
-      Jumbotron
+      Jumbotron,
+      CentralMenu
     }
   }
 </script>
@@ -20,6 +22,7 @@
     </header>
     <main>
       <Jumbotron/>
+      <CentralMenu/>
     </main>
     <footer>
       <div>
@@ -32,18 +35,22 @@
 <style lang="scss">
   @use "./style/main.scss" as *;
 
-  #page{
+  #page
+  {
     background-color: green;
     padding-top: 3vh;
   }
 
-  header{
-    div{
+  header
+  {
+    div
+    {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 100%;
-      img{
+      img
+      {
         height: 90%;
       }
     }

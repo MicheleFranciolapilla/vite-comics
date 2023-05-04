@@ -1,8 +1,7 @@
 @import "./partials/mixin.scss";
 @import "./partials/variables.scss";
 
-*
-{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -35,6 +34,15 @@ header
             color: blue;
         }
     }
+}
+
+#central_menu_block
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(1.5 * $header_height);
+    background-color: blue;
 }
 
 .centered_block
