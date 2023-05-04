@@ -31,5 +31,11 @@
     </nav>
 </template>
 
-<style>
+<style lang="scss">
+    @use "../style/main.scss" as *;
+    nav{
+        ul{
+            @include itemsListStyle(1, 1rem, 20px, black);
+        }
+    }
 </style>
