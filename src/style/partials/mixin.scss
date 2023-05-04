@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @mixin itemsListStyle($list, $font, $gap, $color)
 {
     display: flex;

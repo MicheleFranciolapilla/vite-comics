@@ -1,4 +1,11 @@
 @import "./partials/mixin.scss";
+@import "./partials/variables.scss";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 ul
 {
@@ -8,4 +15,19 @@ ul
 a
 {
     text-decoration: none;
+}
+
+header,
+footer{
+    height: $header_height;
+}
+
+header{
+    background-color: white;
+}
+
+.centered_block
+{
+    width: $block_width;
+    margin: auto;
 }

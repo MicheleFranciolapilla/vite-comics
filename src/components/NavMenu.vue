@@ -35,7 +35,7 @@
     @use "../style/main.scss" as *;
     nav{
         ul{
-            @include itemsListStyle(1, 1rem, 20px, black);
+            @include itemsListStyle(1, 0.75rem, 20px, black);
         }
     }
 </style>
