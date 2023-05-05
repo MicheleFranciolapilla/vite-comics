@@ -20,13 +20,3 @@ a{
     width: $block_width;
     margin: 0 auto;
 }
-
-#footer_bottom
-{
-    position: absolute;
-    bottom: 0;
-    z-index: 999;
-    width: 100%;
-    height: $header_height;
-    background-color: #303030;
-}
