@@ -3,13 +3,15 @@
   import Jumbotron from "./components/Jumbotron.vue"
   import CentralMenu from "./components/CentralMenu.vue"
   import FooterComponent from "./components/FooterComponent.vue"
+  import ComicsComponent from "./components/ComicsComponent.vue"
   export default{
     name: "App",
     components: {
       NavMenu,
       Jumbotron,
       CentralMenu,
-      FooterComponent
+      FooterComponent,
+      ComicsComponent
     }
   }
 </script>
@@ -19,6 +21,7 @@
     <NavMenu/>
     <main>
       <Jumbotron/>
+      <ComicsComponent/>
       <CentralMenu/>
     </main>
     <footer>
