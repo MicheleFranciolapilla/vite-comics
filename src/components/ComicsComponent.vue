@@ -92,9 +92,9 @@
                     <img v-bind:src="card.thumb" v-bind:alt="card.series">
                 </div>
                 <div class="card_info">
-                    <h5>{{card.series}}</h5>
+                    <h6>{{card.series}}</h6>
                     <h6>{{card.type}}</h6>
-                    <h5>{{card.price}}</h5>
+                    <span>{{card.price}}</span>
                 </div>
             </div>
         </div>
@@ -109,13 +109,13 @@
         background-color: $comics_bg_color;
         padding: 3rem 0;
         #cards_container{
-            border: 3px solid yellow;
             display: flex;
             flex-wrap: wrap;
             gap: $cards_gap;
             .comics_card{
                 flex-basis: calc((100% - ($cards_gap * ($cards_per_row - 1))) / $cards_per_row);
-                border: 3px solid blue;
+                overflow: hidden;
+                border: 3px solid $comics_bg_color;
                 .img_container{
                     width: 100%;
                     aspect-ratio: 1;
@@ -126,18 +126,28 @@
                     }
                 }
                 .card_info{
-                    width: 100%;
+                    width: calc(100%);
                     height: 50px;
-                    border: 1px solid blueviolet;
+                    padding: 3px 10px;
+                    border: 1px solid white;
                     white-space: nowrap;
-                    overflow: clip;
-                    // text-overflow: clip;
-
-                    h5,h6{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    *{
                         width: calc(100%);
                         white-space: nowrap;
                         overflow: hidden;
-                        // text-overflow: clip;
+                        text-overflow: ellipsis;
+                    }
+                    h6{
+                        color: yellowgreen;
+                        &:first-child{
+                            color: rgb(227, 220, 220);
+                        }
+                    }
+                    span{
+                        font-size: medium;
+                        color: blue;
                     }
                 }
             }
