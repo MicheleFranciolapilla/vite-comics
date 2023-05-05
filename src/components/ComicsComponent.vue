@@ -1,6 +1,10 @@
 <script>
+    import SingleCardViewer from "./SingleCardViewer.vue"
     export default{
         name:   "ComicsComponent",
+        components: {
+            SingleCardViewer
+        },
         data()
         {
             return{
@@ -88,14 +92,7 @@
     <div id="comics_area">
         <div id="cards_container" class="centered_block">
             <div class="comics_card" v-for="(card, index) in comics" :key="index">
-                <div class="img_container">
-                    <img v-bind:src="card.thumb" v-bind:alt="card.series">
-                </div>
-                <div class="card_info">
-                    <h6>{{card.series}}</h6>
-                    <h6>{{card.type}}</h6>
-                    <span>{{card.price}}</span>
-                </div>
+                <SingleCardViewer :single_card = "card" />
             </div>
         </div>
     </div>
@@ -115,40 +112,10 @@
             .comics_card{
                 flex-basis: calc((100% - ($cards_gap * ($cards_per_row - 1))) / $cards_per_row);
                 overflow: hidden;
+                cursor: pointer;
                 border: 3px solid $comics_bg_color;
-                .img_container{
-                    width: 100%;
-                    aspect-ratio: 1;
-                    img{
-                    width: 100%;
-                    aspect-ratio: 1;
-                    object-fit: cover;
-                    }
-                }
-                .card_info{
-                    width: calc(100%);
-                    height: 50px;
-                    padding: 3px 10px;
-                    border: 1px solid white;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    *{
-                        width: calc(100%);
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                    h6{
-                        color: yellowgreen;
-                        &:first-child{
-                            color: rgb(227, 220, 220);
-                        }
-                    }
-                    span{
-                        font-size: medium;
-                        color: blue;
-                    }
+                &:hover{
+                    border-color: blue;
                 }
             }
         }
