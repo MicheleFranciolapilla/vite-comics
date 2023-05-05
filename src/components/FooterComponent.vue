@@ -4,6 +4,53 @@
         data()
         {
             return{
+                footer_menus: [
+                                {
+                                    list_title  : "DC COMICS",
+                                    list        : [
+                                                    "Characters",
+                                                    "Comics",
+                                                    "Movies",
+                                                    "TV",
+                                                    "Games",
+                                                    "Videos",
+                                                    "News"
+                                                ]
+                                },
+                                {
+                                    list_title  : "SHOP",
+                                    list        : [
+                                                    "Shop DC",
+                                                    "Shop DC Collectibles"
+                                                ]
+                                },
+                                {
+                                    list_title  : "DC",
+                                    list        : [
+                                                    "Terms Of Use",
+                                                    "Privacy policy (New)",
+                                                    "Ad Choices",
+                                                    "Advertising",
+                                                    "Jobs",
+                                                    "Subscriptions",
+                                                    "Talent Workshops",
+                                                    "CPSC Certificates",
+                                                    "Ratings",
+                                                    "Shop Help",
+                                                    "Contact Us"
+                                                ]
+                                },
+                                {
+                                    list_title  : "SITES",
+                                    list        : [
+                                                    "DC",
+                                                    "MAD Magazine",
+                                                    "DC Kids",
+                                                    "DC Universe",
+                                                    "DC Power Visa"
+                                                ]
+                                },
+                ],
                 social_icons: [
                     "footer-facebook.png",
                     "footer-twitter.png",
@@ -25,6 +72,20 @@
 
 <template>
     <div id="footer_box">
+        <div id="footer_menu_box" class="centered_block">
+            <div>
+                <ul id="lists_list">
+                    <li v-for="(item, list_index) in footer_menus" :key="list_index">
+                        <h5>{{ item.list_title }}</h5>
+                        <ul id="menu_list">
+                            <li v-for="(menu_item, index) in footer_menus[list_index].list" :key="index + 100">
+                                <a href="#">{{ menu_item }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <img src="../assets/img/dc-logo-bg.png">
         <div id="footer_bottom">
             <div id="sign_up_and_social" class="centered_block">
@@ -46,8 +107,37 @@
     #footer_box{
         min-height: $footer_bg_height;
         background-image: url("../assets/img/footer-bg.jpg");
-        padding: 2rem 0;
         position: relative;
+        #footer_menu_box{
+            height: calc(100% - $footer_height);
+            div{
+                width: 33%;
+                padding: auto 0;
+                #lists_list{
+                    max-height: calc($footer_bg_height - $footer_height);
+
+                    display: flex;
+                    flex-flow: column wrap;
+                    gap: 1rem;
+                    color: white;
+                    li{
+                        h5{
+                            margin: 1rem 0;
+                        }
+                        #menu_list{
+                            @include itemsListStyle(3, 0.7rem, 10px, rgb(186, 178, 178));
+                            li{
+                                &:hover{
+                                    a{
+                                        color: lightblue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         img{
             height: calc(100% + $footer_height);
             position: absolute;
