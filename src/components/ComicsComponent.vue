@@ -90,10 +90,16 @@
 
 <template>
     <div id="comics_area">
+        <div id="floating_label">
+            <span>CURRENT SERIES</span>
+        </div>
         <div id="cards_container" class="centered_block">
             <div class="comics_card" v-for="(card, index) in comics" :key="index">
                 <SingleCardViewer :single_card = "card" />
             </div>
+        </div>
+        <div id="load_more">
+            <a href="#">LOAD MORE</a>
         </div>
     </div>
 </template>
@@ -102,9 +108,20 @@
     @use "../style/main.scss" as *;
 
     #comics_area{
+        position: relative;
         min-height: $comics_area_height;
         background-color: $comics_bg_color;
         padding: 3rem 0;
+        #floating_label{
+            width: 200px;
+            background-color: $central_color;
+            padding: 10px 25px;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: calc((100% - $block_width) / 2);
+            transform: translate(-15px, -50%);
+        }
         #cards_container{
             display: flex;
             flex-wrap: wrap;
@@ -116,6 +133,19 @@
                 border: 3px solid $comics_bg_color;
                 &:hover{
                     border-color: blue;
+                }
+            }
+        }
+        #load_more{
+            width: 150px;
+            background-color: $central_color;
+            padding: 10px 25px;
+            margin: 0 auto;
+            margin-top: 2rem;
+            a{
+                color: white;
+                &:hover{
+                    color: yellowgreen;
                 }
             }
         }
